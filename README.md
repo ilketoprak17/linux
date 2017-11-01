@@ -14,6 +14,8 @@ Traceback (most recent call last):
     raise SMTPServerDisconnected("Connection unexpectedly closed")
 smtplib.SMTPServerDisconnected: Connection unexpectedly closed  
   
+  NOT:Hatanın sebebi çok büyük bi' ihtimalle gmail'in beni çok fazla deneme yüzünden bloklaması peki o halde bunu nasıl çözeceğim?
+  
   PASSWORD FOUND HATASI:2
   
   Enter the target's username: ilketoprak17@gmail.com
